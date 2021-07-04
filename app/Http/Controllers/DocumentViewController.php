@@ -61,7 +61,7 @@ public function edit($id)
     $doc->keywords=$req->keywords;
 
     $doc->update();
-    return redirect('/');
+    return redirect('home');
   }
 
 
