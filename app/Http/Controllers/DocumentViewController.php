@@ -33,13 +33,13 @@ class DocumentViewController extends Controller
   $doc->keywords=$req->keywords;
   $doc->user_id=Auth::user()->id;
   $doc->save();
-  return redirect('/all');
+  return redirect('/');
   }
 
   
   public function destroy($id){
     Document::find($id)->delete();
-    return redirect('/all');
+    return redirect('/');
 }
 
 
@@ -61,6 +61,14 @@ public function edit($id)
     $doc->keywords=$req->keywords;
 
     $doc->update();
-    return redirect('/all');
+    return redirect('/');
+  }
+
+
+  public function search(){
+    
+    $search=$_GET['search'];
+    $document=Document::where('keywords','LIKE','%'.$search.'%')->get();
+    return view('pages.search',compact('document'));
   }
 }

@@ -3,7 +3,7 @@
 @section('content')
 
 
-  @foreach ($documents as $doc)
+  @foreach ($document as $doc)
   <table class="table w-75 mt-5 m-auto">
    
     <thead>

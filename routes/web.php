@@ -32,4 +32,6 @@ Route::delete('delete/{id}',[DocumentViewController::class,'destroy'])->name('de
 Route::get('update/{id}', [DocumentViewController::class, 'edit'])->name('update');
 Route::post('edited/{id}', [DocumentViewController::class, 'update'])->name('edited');
 
+Route::get('search', [DocumentViewController::class, 'search'])->name('search');
+
 });

@@ -105,6 +105,12 @@
         <button class="btn btn-danger">Logout</button>
         </form>
     </div>
+    <div class="d-flex justify-content-center mt-2">
+        <form action="{{route('search')}}" method="get" class="d-flex">
+          <input type="text" class="form-control  " name="search"  placeholder="search">
+          <button class="btn btn-success " type="submit">Search</button>
+        </form>
+    </div>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper">
