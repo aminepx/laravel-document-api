@@ -72,7 +72,7 @@ Php artisan key:generate --show
 
 Php artisan config:cash
 
-Laravel auth 
+Laravel auth scafolding
 
 Composer require laravel/ui^2.4
 
