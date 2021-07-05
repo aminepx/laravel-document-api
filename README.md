@@ -70,13 +70,9 @@ Npm i
 
 Php artisan key:generate --show
 
-Php artisan config:cash
+Php artisan config:cach
 
-Laravel auth scafolding
 
-Composer require laravel/ui^2.4
-
-Php artisan ui vue --auth
 
 Php artisan migrate
 
