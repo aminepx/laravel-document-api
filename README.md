@@ -65,12 +65,20 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Commands to make Project work
 
 Composer update
-Npm i
+
+Npm i 
+
 Php artisan key:generate --show
+
 Php artisan config:cash
-Laravel auth scafolding
+
+Laravel auth 
+
 Composer require laravel/ui^2.4
+
 Php artisan ui vue --auth
-Php artisan migrate 
+
+Php artisan migrate
+
 Php artisan serve
 
