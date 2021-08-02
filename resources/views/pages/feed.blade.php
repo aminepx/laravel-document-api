@@ -8,11 +8,12 @@
    
     <thead>
       <tr>
-        <th style="width: 200px" scope="col">ID</th>
-        <th style="width: 200px" scope="col">Title</th>
-        <th style="width: 200px" scope="col">subtitle</th>
-        <th style="width: 200px" scope="col">summary</th>
-        <th style="width: 200px" scope="col">keywords</th>
+        <th style="" scope="col">ID</th>
+        <th style="" scope="col">Title</th>
+        <th style="" scope="col">subtitle</th>
+        <th style="" scope="col">summary</th>
+        <th style="" scope="col">keywords</th>
+        <th style="" scope="col">Pdf</th>
         <th></th>
       </tr>
     </thead>
@@ -20,10 +21,12 @@
     <tr >
       
         <th scope="row">{{$doc->id}}</th>
-        <td style="width: 250px">{{$doc->title}}</td>
-        <td style="width: 250px">{{$doc->subtitle}}</td>
-        <td style="width: 250px">{{$doc->summary}}</td>
-        <td style="width: 250px">{{$doc->keywords}}</td>
+        <td style="">{{$doc->title}}</td>
+        <td style="">{{$doc->subtitle}}</td>
+        <td style="">{{$doc->summary}}</td>
+        <td style="">{{$doc->keywords}}</td>
+        <td><a href="{{url('/download',$doc->pdf)}}">{{$doc->pdf}}</a></td>
+       
         
              @if (Auth::user()->id == $doc->user_id)
              <td class="d-flex">

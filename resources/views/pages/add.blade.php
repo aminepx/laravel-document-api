@@ -24,6 +24,12 @@
             <input type="text" class="form-control" name="keywords"  placeholder="Keywords">
             <label for="floatingInput">Keywords</label>
           </div>
+          <div class="form-floating mb-2">
+            <input type="file" class="form-control" name="pdf"  placeholder="Keywords">
+            <label for="floatingInput">PDF</label>
+          </div>
+          <input type="hidden" class="form-control" name="user_id"  placeholder="user id" value="{{Auth::user()->id}}">
+          
         <button class="btn  btn-success form-control mt-2 "> Add</button>
     </div>
    </div>

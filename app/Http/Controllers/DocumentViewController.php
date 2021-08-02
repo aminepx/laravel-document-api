@@ -31,6 +31,15 @@ class DocumentViewController extends Controller
   $doc->subtitle=$req->subtitle;
   $doc->summary=$req->summary;
   $doc->keywords=$req->keywords;
+
+  $req->validate([
+    'pdf'=>'required|mimes:pdf',
+    
+]);
+
+$newPdfname=$req->pdf->getClientOriginalName();
+$req->pdf->move(public_path('pdf'),$newPdfname);
+$doc->pdf=$newPdfname;
   $doc->user_id=Auth::user()->id;
   $doc->save();
   return redirect('/');
@@ -71,4 +80,8 @@ public function edit($id)
     $document=Document::where('keywords','LIKE','%'.$search.'%')->get();
     return view('pages.search',compact('document'));
   }
+  public function download(Request $req, $file){
+
+    return response()->download(public_path(('pdf/'.$file)));
+}
 }

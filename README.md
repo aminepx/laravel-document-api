@@ -68,9 +68,11 @@ Composer update
 
 Npm i 
 
+Npm run dev
+
 Php artisan key:generate --show
 
-Php artisan config:cach
+Php artisan config:cache
 
 
 

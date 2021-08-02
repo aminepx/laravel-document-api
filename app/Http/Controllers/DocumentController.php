@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Document;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DocumentController extends Controller
 {
@@ -24,6 +25,7 @@ class DocumentController extends Controller
   $doc->subtitle=$req->subtitle;
   $doc->summary=$req->summary;
   $doc->keywords=$req->keywords;
+  $doc->user_id=Auth::user()->id;
   $doc->save();
   }
 
@@ -40,6 +42,7 @@ class DocumentController extends Controller
     $doc->subtitle=$req->subtitle;
     $doc->summary=$req->summary;
     $doc->keywords=$req->keywords;
+   
 
     $doc->update();
   }

@@ -18,6 +18,8 @@ class CreateDocumentsTable extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->string('summary');
+            $table->string('pdf');
+
             $table->string('keywords');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
