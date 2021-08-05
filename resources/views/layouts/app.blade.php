@@ -118,6 +118,7 @@
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ route('/') }}">All Documments</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('add')}}">Add Documment</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('profile')}}">Profile</a>
             </div>
            
         </div>

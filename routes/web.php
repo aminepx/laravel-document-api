@@ -34,4 +34,7 @@ Route::post('edited/{id}', [DocumentViewController::class, 'update'])->name('edi
 
 Route::get('search', [DocumentViewController::class, 'search'])->name('search');
 Route::get('download/{file}',[DocumentViewController::class,'download'])->name('download');
+Route::get('profile',[DocumentViewController::class,'getUsers'])->name('profile');
+Route::get('editProfile/{id}', [DocumentViewController::class, 'editProfile'])->name('editProfile');
+Route::post('updateProfile/{id}', [DocumentViewController::class, 'updateProfile'])->name('updateProfile');
 });

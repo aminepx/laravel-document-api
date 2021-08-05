@@ -84,4 +84,27 @@ public function edit($id)
 
     return response()->download(public_path(('pdf/'.$file)));
 }
+
+  public function getUsers(){
+  $users=User::all();
+  return view('pages/profile',['users'=>$users]);
+}
+public function editProfile($id)
+    {
+      $user=  User::find($id);
+       return view('pages.editProfile',['user'=>$user]);
+    }
+
+public function updateProfile(Request $req,$id){
+      
+  $user=User::find($id);
+  $user->name=$req->name;
+  
+  $newImagename=$req->image->getClientOriginalName();
+  $req->image->move(public_path('images'),$newImagename);
+  $user->image=$newImagename;
+  $user->update();
+  return redirect('profile');
+}
+
 }
